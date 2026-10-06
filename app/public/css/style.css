@@ -1,0 +1,90 @@
+:root {
+  --cor-fundo-pagina: #f8f9fa; /* Cor de fundo suave (cinza claro) */
+  --cor-cabecalho: #007bff; /* Azul padrão (cor primária do Bootstrap) */
+  --cor-navegacao: #7cbcf5; /* Cinza suave para a navegação */
+  --cor-botoes: #28a745; /* Verde de sucesso */
+  --cor-botoes-hover: #218838; /* Verde mais escuro para hover */
+  --cor-titulo: #343a40; /* Cor escura para os títulos */
+  --cor-texto: #212529; /* Cor do texto principal */
+  --cor-texto-secundario: #6c757d; /* Cor suave para texto secundário */
+  
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  header {
+    background-color: var(--cor-cabecalho);
+    color: white;
+    text-align: center;
+    padding: 1rem;  
+  }
+  
+  nav ul {
+    list-style: none;
+    height: 48px;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--cor-navegacao);
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--cor-botoes);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--cor-botoes-hover);
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    background-color: var(--cor-cabecalho);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  h1, h2 {
+    color: var(--cor-titulo);
+  }
+  
+  p {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1rem;
+  }
+  

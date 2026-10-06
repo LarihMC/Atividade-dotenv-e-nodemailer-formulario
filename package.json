@@ -1,0 +1,17 @@
+{
+  "name": "atividade-dotenv-e-nodemailer-formulario",
+  "version": "1.0.0",
+  "description": "formulario 06/10 dotenv e nodemailer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LarihMC",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^7.0.1",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "readline-sync": "^1.4.10"
+  }
+}
