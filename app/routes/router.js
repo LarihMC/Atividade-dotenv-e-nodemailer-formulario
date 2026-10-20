@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv").config()
+
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -14,14 +16,17 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-transporter.sendMail(data[callback])
 
-const mailOptions = {
+router.get("/", (req, res)=>{
+    res.render("pages/forms", {titulo:"Formulario 2026"});
+});
+
+router.post("/formulario", (req, res)=>{
+    const mailOptions = {
     from: process.env.EMAIL_USER,
     to: req.body.email,
     subject: req.body.assunto,
     text: req.body.mensagem,
-    html: "<h1>BORA BK HJ?</h1>"
 };
 
 transporter.sendMail(mailOptions, (error, info) => {
@@ -33,9 +38,6 @@ transporter.sendMail(mailOptions, (error, info) => {
     }
 });
 
-router.get("/", (req, res)=>{
-    res.render("pages/forms", {titulo:"Formulario 2026"});
-});
-
+})
 
 module.exports = router;
